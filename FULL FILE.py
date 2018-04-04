@@ -22,7 +22,7 @@ class SampleApp(tk.Tk):
 
         self.frames = {}
         #HAVE TO INSERT EACH NEW PAGE INTO THIS LIST IN PARENTHESES
-        for F in (OpeningPage, InOrOut, PleaseScan, RejectID, PageOne, PageTwo):
+        for F in (OpeningPage, InOrOut, PleaseScan, RejectID, ThankYou, Experience, PageOne, PageTwo):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -119,7 +119,7 @@ class OpeningPage(tk.Frame):
         btn0.grid(column=300, row=900)
 
         def update_submit():
-            controller.show_frame("PleaseScan")
+            controller.show_frame("InOrOut")
             
         btnsub = Button(self, text = "Submit ID", command = update_submit)
         btnsub.grid(column=300, row=1000)
@@ -146,22 +146,6 @@ class RejectID(tk.Frame):
     def show(self):
         self.tkraise()
 
-#ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
-class InOrOut(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-
-        lbl = Label(self, text = "Are you checking your tool in or out?")
-        lbl.grid(column = 6, row =3)
-        rad1 = Radiobutton(self, text = 'Check In', value = 1, command= lambda: self.controller.show_frame('OpeningPage'))
-        rad2 = Radiobutton(self, text = 'Check Out', value = 2)
-        rad1.grid(column=6, row=4)
-        rad2.grid(column=6, row=5)
-
-    def show(self):
-        self.tkraise()
-
 #TELLS THE PERSON TO SCAN THE ITEM
 class PleaseScan(tk.Frame):
      def __init__(self, parent, controller):
@@ -171,9 +155,69 @@ class PleaseScan(tk.Frame):
         lbl = Label(self, text = "Please scan your tool!")
         lbl.grid(column=300, row=60)
 
+        #need to put in code that automatically recognizes that a tool has been scanned and moves onto the next page
+
      def show(self):
           self.tkraise()
-        
+
+#ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
+class InOrOut(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl = Label(self, text = "Are you checking your tool in or out?")
+        lbl.grid(column = 6, row =3)
+        rad1 = Radiobutton(self, text = 'Check In', value = 1, command= lambda: self.controller.show_frame('ThankYou'))
+        rad2 = Radiobutton(self, text = 'Check Out', value = 2,command= lambda: self.controller.show_frame('Experience'))
+        rad1.grid(column=6, row=4)
+        rad2.grid(column=6, row=5)
+
+    def show(self):
+        self.tkraise()
+
+#ASKS THE PERSON IF THEY ARE CHECKING A TOOL IN HOW THEIR EXPERIENCE WAS
+class Experience(tk.Frame):
+     def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl1 = Label(self, text = "Please rate the condition of the tool on a scale from 0 (poor), to 5 (average), to 10 (perfect).")
+        lbl1.grid(column=300, row=0)
+
+        lblcom = Label(self, text = " ")
+        lblcom.grid(column=300, row=70)
+
+        def clicked():
+            lblcom.configure(text = "We are sorry for your experience. Please consult the professor.")
+        rad1 = Radiobutton(self, text = '0', value = 1, command = clicked)
+        rad1.grid(column = 100, row = 30)
+
+        def clicked():
+            lblcom.configure(text = "Please consult the professor to elaborate about what could have been improved.")
+        rad2 = Radiobutton(self, text = '5', value = 2, command = clicked)
+        rad2.grid(column = 100, row = 40)
+
+        def clicked():
+            lblcom.configure(text = "Awesome!")
+        rad3 = Radiobutton(self, text = '10', value = 3, command = clicked)
+        rad3.grid(column = 100, row = 50)
+            
+     def show(self):
+          self.tkraise()
+          
+#LAST MESSAGE TO SOMEONE WHO IS CHECKING A TOOL OUT, THANK YOU
+class ThankYou(tk.Frame):
+     def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl = Label(self, text = "Thank you!")
+        lbl.grid(column=300, row=60)
+
+     def show(self):
+          self.tkraise()
+    
 class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -192,7 +236,6 @@ class StartPage(tk.Frame):
     def show(self):
         self.tkraise()
 
-
 class PageOne(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -204,7 +247,6 @@ class PageOne(tk.Frame):
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
 
-
 class PageTwo(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -215,7 +257,6 @@ class PageTwo(tk.Frame):
         button = tk.Button(self, text="Go to the start page",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
-
 
 if __name__ == "__main__":
     app = SampleApp()
