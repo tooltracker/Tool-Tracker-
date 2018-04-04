@@ -22,7 +22,7 @@ class SampleApp(tk.Tk):
 
         self.frames = {}
         #HAVE TO INSERT EACH NEW PAGE INTO THIS LIST IN PARENTHESES
-        for F in (OpeningPage, RejectID, PageOne, PageTwo):
+        for F in (OpeningPage, InOrOut, PleaseScan, RejectID, PageOne, PageTwo):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -39,6 +39,7 @@ class SampleApp(tk.Tk):
         frame = self.frames[page_name]
         frame.show()
 
+#OPENING PAGE
 class OpeningPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -118,7 +119,7 @@ class OpeningPage(tk.Frame):
         btn0.grid(column=300, row=900)
 
         def update_submit():
-            controller.show_frame("RejectID")
+            controller.show_frame("PleaseScan")
             
         btnsub = Button(self, text = "Submit ID", command = update_submit)
         btnsub.grid(column=300, row=1000)
@@ -130,6 +131,7 @@ class OpeningPage(tk.Frame):
         lblID.grid(column=300, row=200)
         self.tkraise()
 
+#THIS IS AN OPTION FOR IF THE ID IS NOT VAILD
 class RejectID(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -139,25 +141,38 @@ class RejectID(tk.Frame):
         lbl1.grid(column=300, row=0)
 
         btn2 = Button(self, text = "Return to previous page", command= lambda: self.controller.show_frame('OpeningPage'))
-        btn2.grid(column=300, row=600)
+        btn2.grid(column = 300, row= 600)
+       
+    def show(self):
+        self.tkraise()
+
+#ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
+class InOrOut(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl = Label(self, text = "Are you checking your tool in or out?")
+        lbl.grid(column = 6, row =3)
+        rad1 = Radiobutton(self, text = 'Check In', value = 1, command= lambda: self.controller.show_frame('OpeningPage'))
+        rad2 = Radiobutton(self, text = 'Check Out', value = 2)
+        rad1.grid(column=6, row=4)
+        rad2.grid(column=6, row=5)
 
     def show(self):
         self.tkraise()
 
-#class CheckInOrOut(tk.Frame):
-#    def __init__(self, parent, controller):
-#        tk.Frame.__init__(self, parent)
-#        self.controller = controller
+#TELLS THE PERSON TO SCAN THE ITEM
+class PleaseScan(tk.Frame):
+     def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
 
-#    lbl = Label(self, text = "Are you checking your tool in or out?")
-#    lbl.grid(column = 6, row =3)
-#    rad1 = Radiobutton(self, text = 'Check In', value = 1)
-#    rad2 = Radiobutton(self, text = 'Check Out', value = 2)
-#    rad1.grid(column=6, row=4)
-#    rad2.grid(column=6, row=5)
-        
-#    def show(self):
-#        self.tkraise()
+        lbl = Label(self, text = "Please scan your tool!")
+        lbl.grid(column=300, row=60)
+
+     def show(self):
+          self.tkraise()
         
 class StartPage(tk.Frame):
 
@@ -205,3 +220,4 @@ class PageTwo(tk.Frame):
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
+
