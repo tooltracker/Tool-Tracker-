@@ -4,6 +4,14 @@ from tkinter import *
 #import Tkinter as tk     # python 2
 #import tkFont as tkfont  # python 2
 
+#FLOW:
+    #FIRST PAGE: opening page
+    #POTENTIAL SECOND: rejecting an ID, if not go to the please scan
+    #THIRD: please scan item --> atuomatically switch to
+    #FOURTH: are you checking in or out
+        #IF PRESS OUT -->THANK YOU
+        #IF PRESS IN -->  how was your experience
+
 class SampleApp(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -52,6 +60,17 @@ class OpeningPage(tk.Frame):
         lbl2.grid(column=300, row=100)
         self.idlist = []
 
+        self.accepted0 = [0,0,0,0,0,0]
+        self.accepted1 = [1,1,1,1,1,1]
+        self.accepted2 = [2,2,2,2,2,2]
+        self.accepted3 = [3,3,3,3,3,3]
+        self.accepted4 = [4,4,4,4,4,4]
+        self.accepted5 = [5,5,5,5,5,5]
+        self.accepted6 = [6,6,6,6,6,6]
+        self.accepted7 = [7,7,7,7,7,7]
+        self.accepted8 = [8,8,8,8,8,8]
+        self.accepted9 = [9,9,9,9,9,9]
+        
         def update(number):
             #specify the length of the ID 
             if len(self.idlist)<6:
@@ -119,13 +138,16 @@ class OpeningPage(tk.Frame):
         btn0.grid(column=300, row=900)
 
         def update_submit():
-            controller.show_frame("InOrOut")
+            if self.idlist == self.accepted0 or self.idlist == self.accepted1 or self.idlist == self.accepted2 or self.idlist == self.accepted3 or self.idlist == self.accepted4 or self.idlist == self.accepted5 or self.idlist == self.accepted6 or self.idlist == self.accepted7 or self.idlist == self.accepted8 or self.idlist == self.accepted9:
+                controller.show_frame("InOrOut")
+            else:
+              controller.show_frame("RejectID")
+            
             
         btnsub = Button(self, text = "Submit ID", command = update_submit)
         btnsub.grid(column=300, row=1000)
 
     def show(self):
-        # do whatever
         self.idlist = []
         lblID = tk.Label(self, text = print(self.idlist))
         lblID.grid(column=300, row=200)
@@ -199,7 +221,7 @@ class Experience(tk.Frame):
         rad2.grid(column = 100, row = 40)
 
         def clicked():
-            lblcom.configure(text = "Awesome!")
+            lblcom.configure(text = "Awesome, thank you!")
         rad3 = Radiobutton(self, text = '10', value = 3, command = clicked)
         rad3.grid(column = 100, row = 50)
             
