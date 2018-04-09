@@ -7,8 +7,8 @@ from tkinter import *
 #FLOW:
     #FIRST PAGE: opening page
     #POTENTIAL SECOND: rejecting an ID, if not go to the please scan
-    #THIRD: please scan item --> atuomatically switch to
-    #FOURTH: are you checking in or out
+    #THIRD: checking in/out --> atuomatically switch to
+    #FOURTH: please scan your item
         #IF PRESS OUT -->THANK YOU
         #IF PRESS IN -->  how was your experience
 
@@ -190,8 +190,8 @@ class InOrOut(tk.Frame):
 
         lbl = Label(self, text = "Are you checking your tool in or out?")
         lbl.grid(column = 6, row =3)
-        rad1 = Radiobutton(self, text = 'Check In', value = 1, command= lambda: self.controller.show_frame('ThankYou'))
-        rad2 = Radiobutton(self, text = 'Check Out', value = 2,command= lambda: self.controller.show_frame('Experience'))
+        rad1 = Button(self, text = 'Check In', command= lambda: self.controller.show_frame('ThankYou'))
+        rad2 = Button(self, text = 'Check Out',command= lambda: self.controller.show_frame('Experience'))
         rad1.grid(column=6, row=4)
         rad2.grid(column=6, row=5)
 
@@ -283,4 +283,3 @@ class PageTwo(tk.Frame):
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
-
