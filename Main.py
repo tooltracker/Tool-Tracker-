@@ -1,6 +1,14 @@
 import tkinter as tk                # python 3
 from tkinter import font  as tkfont # python 3
 from tkinter import *
+import binascii
+import socket
+import time
+import signal 
+import sys
+
+import Adafruit_PN532 as PN532
+
 #import Tkinter as tk     # python 2
 #import tkFont as tkfont  # python 2
 
@@ -177,8 +185,41 @@ class PleaseScan(tk.Frame):
         lbl = Label(self, text = "Please scan your tool!")
         lbl.grid(column=300, row=60)
 
-        #need to put in code that automatically recognizes that a tool has been scanned and moves onto the next page
+    CS = 18
+    MOSI = 23
+    MISO = 24
+    SCLK = 25
+    CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
+    HEADER = b'BG'
+    def close(signal,frame):
+        sys.exit(0)
+    signal.signal(signal.SIGINT, close)
 
+    pn532 = PN532(cs=CS, sclk=SCLK, mosi=MOSI, miso=MISO)
+    pn532.begin()
+    pn532.SAM_configuration()
+
+    print('Scan Tool')
+    
+    checked = true
+    while checked:
+        uid = pn532.read_passive_target()
+        if uid is None:
+            continue
+        
+    
+    print('')
+    print('Card UID 0x{0}'.format(binascii.hexlify(uid)))
+    
+    if not pn532.mifare_classic_authenticate_block(uid, 4, PN532.MIFARE_CMD_AUTH_B, CARD_KEY):
+        print('Failed to authenticate with card!')
+        
+    data = pn532.mifare_classic_read_block(4)
+    
+
+    print('User ID:{0}'.format(int(data[2:8].decode("utf-8"),16)))
+    checked = false;    
+        
      def show(self):
           self.tkraise()
 
@@ -240,49 +281,8 @@ class ThankYou(tk.Frame):
      def show(self):
           self.tkraise()
 
-class Scan(tk.Frame):
-    import binascii
-    import socket
-    import time
-    import signal
-    import sys
-
-    import Adafruit_PN532 as PN532
-
-    CS = 18
-    MOSI = 23
-    MISO = 24
-    SCLK = 25
-    CARD_KEY = [0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]
-    HEADER = b'BG'
-    def close(signal,frame):
-        sys.exit(0)
-    signal.signal(signal.SIGINT, close)
-
-    pn532 = PN532(cs=CS, sclk=SCLK, mosi=MOSI, miso=MISO)
-    pn532.begin()
-    pn532.SAM_configuration()
-
-    print('Scan Tool')
-    
-    checked = true
-    while checked:
-        uid = pn532.read_passive_target()
-        if uid is None:
-            continue
-        
-    
-    print('')
-    print('Card UID 0x{0}'.format(binascii.hexlify(uid)))
-    
-    if not pn532.mifare_classic_authenticate_block(uid, 4, PN532.MIFARE_CMD_AUTH_B, CARD_KEY):
-        print('Failed to authenticate with card!')
-        
-    data = pn532.mifare_classic_read_block(4)
-    
-
-    print('User ID:{0}'.format(int(data[2:8].decode("utf-8"),16)))
-    checked = false;         
+   
+         
     
     
         
