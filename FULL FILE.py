@@ -7,8 +7,8 @@ from tkinter import *
 #FLOW:
     #FIRST PAGE: opening page
     #POTENTIAL SECOND: rejecting an ID, if not go to the please scan
-    #THIRD: checking in/out --> atuomatically switch to
-    #FOURTH: please scan your item
+    #THIRD: please scan --> scans item and automatically switches to 
+    #FOURTH: are you checking the tool in/out 
         #IF PRESS OUT -->THANK YOU
         #IF PRESS IN -->  how was your experience
 
@@ -30,14 +30,11 @@ class SampleApp(tk.Tk):
 
         self.frames = {}
         #HAVE TO INSERT EACH NEW PAGE INTO THIS LIST IN PARENTHESES
-        for F in (OpeningPage, InOrOut, PleaseScan, RejectID, ThankYou, Experience, PageOne, PageTwo):
+        for F in (OpeningPage, InOrOut, PleaseScan, RejectID, ThankYou, Experience, InfoPage, PageOne, PageTwo):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
 
-            # put all of the pages in the same location;
-            # the one on the top of the stacking order
-            # will be the one that is visible.
             frame.grid(row=0, column=0, sticky="nsew")
 
         self.show_frame("OpeningPage")
@@ -59,6 +56,9 @@ class OpeningPage(tk.Frame):
         lbl2 = tk.Label(self, text = "Please enter Student ID:")
         lbl2.grid(column=300, row=100)
         self.idlist = []
+
+        gotoinfo = Button(self, text = "Info Page",command= lambda: self.controller.show_frame('InfoPage'))
+        gotoinfo.grid (column = 300, row = 1500)
 
         self.accepted0 = [0,0,0,0,0,0]
         self.accepted1 = [1,1,1,1,1,1]
@@ -139,10 +139,9 @@ class OpeningPage(tk.Frame):
 
         def update_submit():
             if self.idlist == self.accepted0 or self.idlist == self.accepted1 or self.idlist == self.accepted2 or self.idlist == self.accepted3 or self.idlist == self.accepted4 or self.idlist == self.accepted5 or self.idlist == self.accepted6 or self.idlist == self.accepted7 or self.idlist == self.accepted8 or self.idlist == self.accepted9:
-                controller.show_frame("InOrOut")
+                controller.show_frame("PleaseScan")
             else:
               controller.show_frame("RejectID")
-            
             
         btnsub = Button(self, text = "Submit ID", command = update_submit)
         btnsub.grid(column=300, row=1000)
@@ -168,6 +167,22 @@ class RejectID(tk.Frame):
     def show(self):
         self.tkraise()
 
+#ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
+class InOrOut(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl = Label(self, text = "Are you checking your tool in or out?")
+        lbl.grid(column = 6, row =3)
+        rad1 = Button(self, text = 'Check In', command= lambda: self.controller.show_frame('Experience'))
+        rad2 = Button(self, text = 'Check Out',command= lambda: self.controller.show_frame('ThankYou'))
+        rad1.grid(column=6, row=4)
+        rad2.grid(column=6, row=5)
+
+    def show(self):
+        self.tkraise()
+
 #TELLS THE PERSON TO SCAN THE ITEM
 class PleaseScan(tk.Frame):
      def __init__(self, parent, controller):
@@ -181,22 +196,6 @@ class PleaseScan(tk.Frame):
 
      def show(self):
           self.tkraise()
-
-#ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
-class InOrOut(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-
-        lbl = Label(self, text = "Are you checking your tool in or out?")
-        lbl.grid(column = 6, row =3)
-        rad1 = Button(self, text = 'Check In', command= lambda: self.controller.show_frame('ThankYou'))
-        rad2 = Button(self, text = 'Check Out',command= lambda: self.controller.show_frame('Experience'))
-        rad1.grid(column=6, row=4)
-        rad2.grid(column=6, row=5)
-
-    def show(self):
-        self.tkraise()
 
 #ASKS THE PERSON IF THEY ARE CHECKING A TOOL IN HOW THEIR EXPERIENCE WAS
 class Experience(tk.Frame):
@@ -230,6 +229,7 @@ class Experience(tk.Frame):
           
 #LAST MESSAGE TO SOMEONE WHO IS CHECKING A TOOL OUT, THANK YOU
 class ThankYou(tk.Frame):
+
      def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
@@ -237,9 +237,24 @@ class ThankYou(tk.Frame):
         lbl = Label(self, text = "Thank you!")
         lbl.grid(column=300, row=60)
 
+        btn2 = Button(self, text = "Return to the home page", command= lambda: self.controller.show_frame('OpeningPage'))
+        btn2.grid(column = 300, row= 600)
+
      def show(self):
-          self.tkraise()
-    
+         self.tkraise()
+
+class InfoPage(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+
+        lbl1 = Label(self, text = "Welcome to the Info Page!")
+        lbl1.grid(column=300, row=0)
+
+    def show(self):
+        self.tkraise()
+        
 class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -258,6 +273,7 @@ class StartPage(tk.Frame):
     def show(self):
         self.tkraise()
 
+        
 class PageOne(tk.Frame):
 
     def __init__(self, parent, controller):
