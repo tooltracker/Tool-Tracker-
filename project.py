@@ -1,12 +1,8 @@
-#import binascii
 import tkinter as tk                # python 3
 from tkinter import font  as tkfont # python 3
 from tkinter import *
 from scanTool import scan
-#import scanTool
-import config
-import scanTool 
-
+from scanTool import getUID
 
 #import Tkinter as tk     # python 2
 #import tkFont as tkfont  # python 2
@@ -20,10 +16,13 @@ import scanTool
         #IF PRESS IN -->  how was your experience
 
 class SampleApp(tk.Tk):
-
+    #toolID = null
+    #toolList = []
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
         self.geometry('718x400')
+        self.toolId = 0
+        #self.toolList = []
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
 
@@ -60,12 +59,15 @@ class OpeningPage(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         
+        self.idlist = []
+        lblBlank = tk.Label(self, text = "")
+        lblBlank.grid(column=400, row=100)
+        
         lbl1 = tk.Label(self, text = "Welcome to Tool Tracker!")
         lbl1.grid(column=300, row=0)
 
         lbl2 = tk.Label(self, text = "Please enter Student ID:")
         lbl2.grid(column=300, row=100)
-        self.idlist = []
 
         gotoinfo = Button(self, text = "Info Page", command = lambda: self.controller.show_frame('InfoPage'))
         gotoinfo.grid(column = 300, row = 1500)
@@ -93,6 +95,7 @@ class OpeningPage(tk.Frame):
                 print(ID)
                 lblBlank = tk.Label(self, text = ""+ ID)
                 lblBlank.grid(column=400, row=100)
+                self.controller.studentID = ID 
 
                # lblID = tk.Label(self, text = self.idlist)
                #lblID.grid(column=300, row=200)
@@ -149,10 +152,9 @@ class OpeningPage(tk.Frame):
 
         def update_submit():
             if self.idlist == self.accepted0 or self.idlist == self.accepted1 or self.idlist == self.accepted2 or self.idlist == self.accepted3 or self.idlist == self.accepted4 or self.idlist == self.accepted5 or self.idlist == self.accepted6 or self.idlist == self.accepted7 or self.idlist == self.accepted8 or self.idlist == self.accepted9:
-                controller.show_frame("PleaseScan")
+                self.controller.show_frame('PleaseScan')
             else:
-              controller.show_frame("RejectID")
-            
+              self.controller.show_frame("RejectID")
             
         btnsub = Button(self, text = "Submit ID", command = update_submit)
         btnsub.grid(column=300, row=1000)
@@ -171,6 +173,7 @@ class RejectID(tk.Frame):
 
         lbl1 = Label(self, text = "This ID is not being recognized as valid. Please press the button and try again.")
         lbl1.grid(column=300, row=0)
+        ID = " "
 
         btn2 = Button(self, text = "Return to previous page", command= lambda: self.controller.show_frame('OpeningPage'))
         btn2.grid(column = 300, row= 600)
@@ -187,7 +190,7 @@ class PleaseScan(tk.Frame):
         lbl = Label(self, text = "SCANNING PAGE")
         lbl.grid(column=300, row=60)
         
-        btnNext = Button(self, text = "Press Me & Then Scan", command= lambda: self.controller.show_frame('Ghost'))
+        btnNext = Button(self, text = "Press Me & Then Scan to the Right of the Console", command= lambda: self.controller.show_frame('Ghost'))
         btnNext.grid(column = 300, row= 70)
 
         #need to put in code that automatically recognizes that a tool has been scanned and moves onto the next page
@@ -202,10 +205,34 @@ class Ghost(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
          
-    
     def show(self):
         self.tkraise()
-        scan()
+        id = scan()
+        print('Returned: ' + str(id))
+        self.controller.toolId = id
+       
+        if str(id) == "1":
+            self.controller.nameoftool = "hammer"
+        if str(id)=="2":
+            self.controller.nameoftool = "screwdriver"
+        if str(id) == "3":
+            self.controller.nameoftool = "chisel"
+        if str(id) == "4":
+            self.controller.nameoftool = "nail"
+        if str(id) == "5":
+            self.controller.nameoftool = "tape measure"
+        if str(id) == "6":
+            self.controller.nameoftool = "bandsaw"
+        if str(id) == "7":
+            self.controller.nameoftool = "table saw"
+        if str(id) == "8":
+            self.controller.nameoftool = "drill press"
+        if str(id) == "9":
+            self.controller.nameoftool = "wrench"
+        if str(id) == "10":
+            self.controller.nameoftool = "utility knife"
+            
+        print(str(self.controller.toolId))
         self.controller.show_frame('InOrOut')
 
 #ASKS THE PERSON IF THEY ARE CHECKING THE TOOL IN OR OUT
@@ -221,11 +248,16 @@ class InOrOut(tk.Frame):
         rad1.grid(column=6, row=4)
         rad2.grid(column=6, row=5)
         
-        scanTool.updatevalue()
-        lbltool = Label(self, text = "This is tool number: " + currentvalue)
-        lbltool.grid(column =6, row =6)
-
+        #scanTool.updatevalue()
+        ##toolList.append(0,self.controller.toolId)
+        ##print(toolList)
+        
     def show(self):
+        print('Id: ' + str(self.controller.toolId))
+        lbltool = Label(self, text = "This is tool number: " + str(self.controller.toolId))
+        lbltool.grid(column =6, row =6)
+        lblname = Label(self, text = "You have a " + self.controller.nameoftool + ".")
+        lblname.grid(column = 6, row = 7)
         self.tkraise()
                         
 #ASKS THE PERSON IF THEY ARE CHECKING A TOOL IN HOW THEIR EXPERIENCE WAS
@@ -233,7 +265,7 @@ class Experience(tk.Frame):
      def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-
+        
         lbl1 = Label(self, text = "Please rate the condition of the tool on a scale from 0 (poor), to 5 (average), to 10 (perfect).")
         lbl1.grid(column=300, row=0)
 
@@ -259,6 +291,7 @@ class Experience(tk.Frame):
         btn2.grid(column = 300, row= 60)
             
      def show(self):
+          self.controller.inorout = 1
           self.tkraise()
           
 #LAST MESSAGE TO SOMEONE WHO IS CHECKING A TOOL OUT, THANK YOU
@@ -272,12 +305,14 @@ class ThankYou(tk.Frame):
         
         btn2 = Button(self, text = "Return to home page", command= lambda: self.controller.show_frame('OpeningPage'))
         btn2.grid(column = 300, row= 70)
-
+        
      def show(self):
-        #scan()
+        #scan#()
+        self.controller.inorout = 0
         self.tkraise()
 
 class InfoPage(tk.Frame):
+    
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
@@ -285,55 +320,26 @@ class InfoPage(tk.Frame):
         lbl1 = Label(self, text = "Welcome to the Info Page!")
         lbl1.grid(column = 300, row =0)
         
-        lbl2 = Label(self, text = "Current Users: ")
-        lbl1.grid(column = 300, row =3)
-        
-        lbl3 = Label(self, text = "Current tools checked out: ")
-        lbl3.grid(column = 300, row =5)
+        btn2 = Button(self, text = "Return to home page", command= lambda: self.controller.show_frame('OpeningPage'))
+        btn2.grid(column = 300, row= 10)
         
     def show(self):
+        #putting controller of the Ids
+        students = Label(self, text = "Current Student ID's: "+ str(self.controller.studentID))
+        students.grid(column = 300, row =1)
+        lbl2 = Label(self, text = "Current Tools: " + self.controller.nameoftool)
+        lbl2.grid(column = 300, row =2)
+        if self.controller.inorout==0:
+            lblInOrOut = Label(self, text = "This tool is checked out.")
+            lblInOrOut.grid(column = 300, row =4)
+        if self.controller.inorout == 1:
+            lblInOrOut = Label(self, text = "This tool is checked in.")
+            lblInOrOut.grid(column = 300, row =4)
+       
         self.tkraise()
-        
-class StartPage(tk.Frame):
-
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        label = tk.Label(self, text="This is the start page", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
-
-        button1 = tk.Button(self, text="Go to Page One",
-                            command=lambda: self.controller.show_frame("PageOne"))
-        button2 = tk.Button(self, text="Go to Page Two",
-                            command=lambda: self.controller.show_frame("PageTwo"))
-        button1.pack()
-        button2.pack()
-
-    def show(self):
-        self.tkraise()
-
-class PageOne(tk.Frame):
-
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        label = tk.Label(self, text="This is page 1", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Go to the start page",
-                           command=lambda: controller.show_frame("StartPage"))
-        button.pack()
-
-class PageTwo(tk.Frame):
-
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        label = tk.Label(self, text="This is page 2", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Go to the start page",
-                           command=lambda: controller.show_frame("StartPage"))
-        button.pack()
 
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
+
+
