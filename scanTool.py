@@ -50,17 +50,13 @@ def scan():
             continue
     # Parse out the block type and subtype
         print('User Id: {0}'.format(int(data[2:8].decode("utf-8"), 16)))
-      #  IDnumber = Label(self, text = "'User Id: {0}'".format(int(data[2:8].decode("utf-8"), 16)))
+        IDnumber = '{0}'.format(int(data[2:8].decode("utf-8"), 16))
         
     # stops scanning
         checked = False
+        print('Returning: ' + str(int(data[2:8].decode("utf-8"), 16)))
+        return int(data[2:8].decode("utf-8"), 16)
         
-       # toolnumbers = []
-       # toolnumbers += 'User Id: {0}'
-
-def updatevalue():
-    global.currentvalue = 'User Id: {0}'.format(int(data[2:8].decode("utf-8"), 16))
-    
-
-    
-        
+def getUID(self, uid, value):
+    self.value = uid
+    return value
