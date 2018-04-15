@@ -22,7 +22,9 @@ class SampleApp(tk.Tk):
         tk.Tk.__init__(self, *args, **kwargs)
         self.geometry('718x400')
         self.toolId = 0
-        #self.toolList = []
+        self.toolList = ["Hammer", "Screwdriver", "Chisel", "Nail", "Tape Measure", "Bandsaw", "Table Saw", "Drill Press", "Monkey Wrench", "Utility Knife"]
+        self.statusList = [True, True, True, True, True, True, True, True, True, True]
+        self.inorout = 1
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
 
@@ -72,16 +74,10 @@ class OpeningPage(tk.Frame):
         gotoinfo = Button(self, text = "Info Page", command = lambda: self.controller.show_frame('InfoPage'))
         gotoinfo.grid(column = 300, row = 1500)
         
-        self.accepted0 = [0,0,0,0,0,0]
-        self.accepted1 = [1,1,1,1,1,1]
-        self.accepted2 = [2,2,2,2,2,2]
-        self.accepted3 = [3,3,3,3,3,3]
-        self.accepted4 = [4,4,4,4,4,4]
-        self.accepted5 = [5,5,5,5,5,5]
-        self.accepted6 = [6,6,6,6,6,6]
-        self.accepted7 = [7,7,7,7,7,7]
-        self.accepted8 = [8,8,8,8,8,8]
-        self.accepted9 = [9,9,9,9,9,9]
+        self.accepted0 = [4,4,8,3,6,3]
+        self.accepted1 = [4,5,5,5,9,7]
+        self.accepted2 = [4,5,7,5,6,5]
+        
         
         def update(number):
             #specify the length of the ID 
@@ -209,28 +205,9 @@ class Ghost(tk.Frame):
         self.tkraise()
         id = scan()
         print('Returned: ' + str(id))
-        self.controller.toolId = id
-       
-        if str(id) == "1":
-            self.controller.nameoftool = "hammer"
-        if str(id)=="2":
-            self.controller.nameoftool = "screwdriver"
-        if str(id) == "3":
-            self.controller.nameoftool = "chisel"
-        if str(id) == "4":
-            self.controller.nameoftool = "nail"
-        if str(id) == "5":
-            self.controller.nameoftool = "tape measure"
-        if str(id) == "6":
-            self.controller.nameoftool = "bandsaw"
-        if str(id) == "7":
-            self.controller.nameoftool = "table saw"
-        if str(id) == "8":
-            self.controller.nameoftool = "drill press"
-        if str(id) == "9":
-            self.controller.nameoftool = "wrench"
-        if str(id) == "10":
-            self.controller.nameoftool = "utility knife"
+        self.controller.toolId = id      
+        self.controller.nameTool = self.controller.toolList[self.controller.toolId-1]
+
             
         print(str(self.controller.toolId))
         self.controller.show_frame('InOrOut')
@@ -254,10 +231,10 @@ class InOrOut(tk.Frame):
         
     def show(self):
         print('Id: ' + str(self.controller.toolId))
-        lbltool = Label(self, text = "This is tool number: " + str(self.controller.toolId))
-        lbltool.grid(column =6, row =6)
-        lblname = Label(self, text = "You have a " + self.controller.nameoftool + ".")
-        lblname.grid(column = 6, row = 7)
+        
+    
+        lblname = Label(self, text = "You have a " + self.controller.toolList[self.controller.toolId-1])
+        lblname.grid(column = 6, row = 6)
         self.tkraise()
                         
 #ASKS THE PERSON IF THEY ARE CHECKING A TOOL IN HOW THEIR EXPERIENCE WAS
@@ -321,25 +298,36 @@ class InfoPage(tk.Frame):
         lbl1.grid(column = 300, row =0)
         
         btn2 = Button(self, text = "Return to home page", command= lambda: self.controller.show_frame('OpeningPage'))
-        btn2.grid(column = 300, row= 10)
+        btn2.grid(column = 300, row= 15)
         
     def show(self):
         #putting controller of the Ids
-        students = Label(self, text = "Current Student ID's: "+ str(self.controller.studentID))
-        students.grid(column = 300, row =1)
-        lbl2 = Label(self, text = "Current Tools: " + self.controller.nameoftool)
+        lbl2 = Label(self, text = "Current Tools: ")
         lbl2.grid(column = 300, row =2)
-        if self.controller.inorout==0:
-            lblInOrOut = Label(self, text = "This tool is checked out.")
-            lblInOrOut.grid(column = 300, row =4)
-        if self.controller.inorout == 1:
-            lblInOrOut = Label(self, text = "This tool is checked in.")
-            lblInOrOut.grid(column = 300, row =4)
+        for index in range(len(self.controller.toolList)):
+            lbl3 = Label(self,text = self.controller.toolList[index])
+            lbl3.grid(column = 300, row =index + 3)
+        
+        lbl4 = Label(self,text = "Status: ")
+        lbl4.grid(column = 600, row = 2)
+        for index in range(len(self.controller.statusList)):
+            if self.controller.statusList[index]:
+                status = Label(self, text = "Checked In")
+            else:
+                status = Labe(self, text = "Checked Out")
+            status.grid(column = 600, row = index +3)
+                           
+        
+    
+##        if self.controller.inorout==0:
+##            lblInOrOut = Label(self, text = "This tool is checked out.")
+##            lblInOrOut.grid(column = 300, row =12)
+##        if self.controller.inorout == 1:
+##            lblInOrOut = Label(self, text = "This tool is checked in.")
+##            lblInOrOut.grid(column = 300, row =12)
        
         self.tkraise()
 
 if __name__ == "__main__":
     app = SampleApp()
     app.mainloop()
-
-
