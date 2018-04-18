@@ -3,9 +3,7 @@ from tkinter import font  as tkfont # python 3
 from tkinter import *
 from scanTool import scan
 from scanTool import getUID
-
-#import Tkinter as tk     # python 2
-#import tkFont as tkfont  # python 2
+import fileinput
 
 #FLOW:
     #FIRST PAGE: opening page
@@ -16,15 +14,16 @@ from scanTool import getUID
         #IF PRESS IN -->  how was your experience
 
 class SampleApp(tk.Tk):
-    #toolID = null
-    #toolList = []
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
-        self.geometry('718x400')
+        self.geometry('800x480')
         self.toolId = 0
         self.toolList = ["Hammer", "Screwdriver", "Chisel", "Nail", "Tape Measure", "Bandsaw", "Table Saw", "Drill Press", "Monkey Wrench", "Utility Knife"]
         self.statusList = [True, True, True, True, True, True, True, True, True, True]
         self.inorout = 1
+        self.userLog = ['','','','','','','','','','']
+        self.ID = ''
+        self.idlist = []
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
 
@@ -64,6 +63,12 @@ class OpeningPage(tk.Frame):
         self.idlist = []
         lblBlank = tk.Label(self, text = "")
         lblBlank.grid(column=400, row=100)
+                  
+       # def clear_text(self):
+        #    self.lblBlank.delete(0,end)
+            
+        #btnclear = Button(self, text = "Clear Current ID", command = self.clear_text)
+        #btnclear.grid(column = 400, row = 200)
         
         lbl1 = tk.Label(self, text = "Welcome to Tool Tracker!")
         lbl1.grid(column=300, row=0)
@@ -147,7 +152,7 @@ class OpeningPage(tk.Frame):
         btn0.grid(column=300, row=900)
 
         def update_submit():
-            if self.idlist == self.accepted0 or self.idlist == self.accepted1 or self.idlist == self.accepted2 or self.idlist == self.accepted3 or self.idlist == self.accepted4 or self.idlist == self.accepted5 or self.idlist == self.accepted6 or self.idlist == self.accepted7 or self.idlist == self.accepted8 or self.idlist == self.accepted9:
+            if self.idlist == self.accepted0 or self.idlist == self.accepted1 or self.idlist == self.accepted2:
                 self.controller.show_frame('PleaseScan')
             else:
               self.controller.show_frame("RejectID")
@@ -171,6 +176,10 @@ class RejectID(tk.Frame):
         lbl1.grid(column=300, row=0)
         ID = " "
 
+  #  def combine():
+   #     lambda: self.controller.show_frame('OpeningPage')
+    #    lblBlank = tk.Label(self, text = "")
+    
         btn2 = Button(self, text = "Return to previous page", command= lambda: self.controller.show_frame('OpeningPage'))
         btn2.grid(column = 300, row= 600)
        
@@ -206,9 +215,8 @@ class Ghost(tk.Frame):
         id = scan()
         print('Returned: ' + str(id))
         self.controller.toolId = id      
-        self.controller.nameTool = self.controller.toolList[self.controller.toolId-1]
+        self.controller.nameTool = self.controller.toolList[self.controller.toolId -1]
 
-            
         print(str(self.controller.toolId))
         self.controller.show_frame('InOrOut')
 
@@ -226,13 +234,12 @@ class InOrOut(tk.Frame):
         rad2.grid(column=6, row=5)
         
         #scanTool.updatevalue()
-        ##toolList.append(0,self.controller.toolId)
-        ##print(toolList)
+        #toolList.append(0,self.controller.toolId)
+        #print(toolList)
         
     def show(self):
         print('Id: ' + str(self.controller.toolId))
         
-    
         lblname = Label(self, text = "You have a " + self.controller.toolList[self.controller.toolId-1])
         lblname.grid(column = 6, row = 6)
         self.tkraise()
@@ -243,7 +250,7 @@ class Experience(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         
-        lbl1 = Label(self, text = "Please rate the condition of the tool on a scale from 0 (poor), to 5 (average), to 10 (perfect).")
+        lbl1 = Label(self, text = "Please rate the condition of the tool on a scale from 1-10")
         lbl1.grid(column=300, row=0)
 
         lblcom = Label(self, text = " ")
@@ -251,24 +258,40 @@ class Experience(tk.Frame):
 
         def clicked():
             lblcom.configure(text = "We are sorry for your experience. Please consult the professor.")
-        rad1 = Radiobutton(self, text = '0', value = 1, command = clicked)
+        rad1 = Radiobutton(self, text = '1', value = 1, command = clicked)
         rad1.grid(column = 100, row = 30)
+        rad2 = Radiobutton(self, text = '2', value = 2, command = clicked)
+        rad2.grid(column = 100, row = 31)
+        rad3 = Radiobutton(self, text = '3', value = 3, command = clicked)
+        rad3.grid(column = 100, row  =32)
 
         def clicked():
             lblcom.configure(text = "Please consult the professor to elaborate about what could have been improved.")
-        rad2 = Radiobutton(self, text = '5', value = 2, command = clicked)
-        rad2.grid(column = 100, row = 40)
+        rad4 = Radiobutton(self, text = '4', value = 4, command = clicked)
+        rad4.grid(column = 100, row = 40)
+        rad5 = Radiobutton(self, text = '5', value = 5, command = clicked)
+        rad5.grid(column = 100, row  = 41)
+        rad6 = Radiobutton(self, text = '6', value = 6, command = clicked)
+        rad6.grid(column = 100, row = 42)
+        
 
         def clicked():
             lblcom.configure(text = "Awesome, thank you!")
-        rad3 = Radiobutton(self, text = '10', value = 3, command = clicked)
-        rad3.grid(column = 100, row = 50)
-        
+        rad7 = Radiobutton(self, text = '7', value = 7, command = clicked)
+        rad7.grid(column = 100, row = 43)
+        rad8= Radiobutton(self, text = '8', value = 8, command = clicked)
+        rad8.grid(column = 100, row = 50)
+        rad9 = Radiobutton(self, text = '9', value = 9, command = clicked)
+        rad9.grid(column = 100, row=51)
+        rad10 = Radiobutton(self, text = '10', value = 10, command = clicked)
+        rad10.grid(column = 100, row = 52)
+
         btn2 = Button(self, text = "Return to home page", command= lambda: self.controller.show_frame('OpeningPage'))
         btn2.grid(column = 300, row= 60)
             
      def show(self):
           self.controller.inorout = 1
+          self.controller.statusList[self.controller.toolId-1] = True
           self.tkraise()
           
 #LAST MESSAGE TO SOMEONE WHO IS CHECKING A TOOL OUT, THANK YOU
@@ -284,7 +307,11 @@ class ThankYou(tk.Frame):
         btn2.grid(column = 300, row= 70)
         
      def show(self):
-        #scan#()
+        #scan()
+        self.controller.statusList[self.controller.toolId-1] = False
+        self.controller.userLog[self.controller.toolId-1] = self.controller.studentID
+        
+        
         self.controller.inorout = 0
         self.tkraise()
 
@@ -303,22 +330,45 @@ class InfoPage(tk.Frame):
     def show(self):
         #putting controller of the Ids
         lbl2 = Label(self, text = "Current Tools: ")
-        lbl2.grid(column = 300, row =2)
+        lbl2.grid(column = 200, row =2)
         for index in range(len(self.controller.toolList)):
             lbl3 = Label(self,text = self.controller.toolList[index])
-            lbl3.grid(column = 300, row =index + 3)
+            lbl3.grid(column = 200, row =index + 3)
         
         lbl4 = Label(self,text = "Status: ")
-        lbl4.grid(column = 600, row = 2)
+        lbl4.grid(column = 300, row = 2)
+        
+        
+        
+        
+#        f = open('InfoPage.txt', 'r')                    
+ #       message = f.read()
+  #      print(message)
+   #     name = 'Zach'
+    #    g = open('Textfile2.txt', 'r+b')
+     #   text = g.read()
+      #  g.seek(2)
+       # g.truncate()
+#        g.write(name)
+ #       print(text)
+  #      lbl5 = Label(self, text = "" + message)
+   #     lbl5.grid(column = 300, row = 1)
+    #    lbl6 = Label(self, text = "" + text)
+     #   lbl6.grid(column = 600, row = 1)
         for index in range(len(self.controller.statusList)):
             if self.controller.statusList[index]:
                 status = Label(self, text = "Checked In")
             else:
-                status = Labe(self, text = "Checked Out")
-            status.grid(column = 600, row = index +3)
-                           
+                status = Label(self, text = "Checked Out")
+            status.grid(column = 300, row = index +3)
+            
+        userLog = Label(self,text = "User: ")
+        userLog.grid(column = 700, row = 2)
+            
+        for index in range(len(self.controller.userLog)):
+            lbl5 = Label(self,text = self.controller.userLog[index])
+            lbl5.grid(column = 700, row =index + 3)
         
-    
 ##        if self.controller.inorout==0:
 ##            lblInOrOut = Label(self, text = "This tool is checked out.")
 ##            lblInOrOut.grid(column = 300, row =12)
