@@ -1,0 +1,224 @@
+Checked Out By:457565 At:2018-04-19 05:00:22.101154
+Checked In By:457565With a Rating of:02018-04-19 05:00:39.765198
+Checked Out By:457565 At:2018-04-19 05:02:35.251670
+Checked In By:457565With a Rating of:02018-04-19 05:02:45.732076
+Checked Out By:457565 At:2018-04-19 05:04:20.834872
+Checked In By:457565With a Rating of:02018-04-19 05:04:29.315272
+Checked Out By:457565 At:2018-04-19 05:07:31.474104
+Checked In By:457565With a Rating of:02018-04-19 05:07:38.193296
+Checked Out By:457565 At:2018-04-19 05:07:39.493445 with a rating of: 3.0Checked Out By:457565 At:2018-04-19 05:12:51.215504
+Checked In By:457565With a Rating of:02018-04-19 05:12:57.406848
+Checked Out By:457565 At:2018-04-19 05:12:58.386984 with a rating of: 3.0Checked Out By:457565 At:2018-04-19 05:13:39.262478
+Checked In By:457565With a Rating of:02018-04-19 05:13:45.422442
+Checked Out By:457565 At:2018-04-19 05:13:46.402134 with a rating of: 10.0Checked Out By:457565 At:2018-04-19 05:17:49.276342
+Checked In By:457565With a Rating of:02018-04-19 05:17:55.356464
+Checked Out By:457565 At:2018-04-19 05:17:56.320427 with a rating of: 8.0Checked Out By:457565 At:2018-04-19 05:29:26.039069
+Checked In By:457565With a Rating of:02018-04-19 05:29:32.807296
+Checked Out By:457565 At:2018-04-19 05:29:33.978832 with a rating of: 6.0Checked Out By:457565 At:2018-04-19 05:30:44.454910
+Checked In By:457565With a Rating of:02018-04-19 05:30:52.726732
+Checked Out By:457565 At:2018-04-19 05:30:53.464358 with a rating of: 6.0Checked Out By:457565 At:2018-04-19 05:32:31.365445
+Checked In By:457565With a Rating of:02018-04-19 05:32:37.013436
+Checked Out By:457565 At:2018-04-19 05:32:37.449665 with a rating of: 2.0Checked Out By:457565 At:2018-04-19 05:33:08.405067
+Checked In By:457565With a Rating of:02018-04-19 05:33:16.069016
+Checked Out By:457565 At:2018-04-19 05:33:16.646994 with a rating of: 3.0Checked Out By:457565 At:2018-04-19 05:33:59.396899
+Checked In By:457565With a Rating of:02018-04-19 05:34:05.092813
+Checked Out By:457565 At:2018-04-19 05:34:05.606847 with a rating of: 3.0Checked Out By:457565 At:2018-04-19 05:34:27.572737
+Checked In By:457565With a Rating of:02018-04-19 05:34:33.892556
+Checked Out By:457565 At:2018-04-19 05:34:34.550996 with a rating of: 5.0Checked Out By:457565 At:2018-04-19 05:36:15.379577
+Checked In By:457565With a Rating of:02018-04-19 05:36:21.171626
+Checked Out By:457565 At:2018-04-19 05:36:22.101657 with a rating of: 3.0Checked Out By:457565 At:2018-04-19 05:36:48.740023
+Checked In By:457565With a Rating of:02018-04-19 05:36:56.291310
+Checked Out By:457565 At:2018-04-19 05:36:56.933220 with a rating of: 1.0Checked Out By:457565 At:2018-04-19 05:37:21.187731
+Checked In By:457565With a Rating of:02018-04-19 05:37:29.139700
+Checked Out By:457565 At:2018-04-19 05:37:29.477105 with a rating of: 4.0Checked Out By:457565 At:2018-04-19 05:38:14.275422
+Checked In By:457565With a Rating of:02018-04-19 05:38:19.778634
+Checked Out By:457565 At:2018-04-19 05:38:20.260936 with a rating of: 2.0Checked Out By:457565 At:2018-04-19 07:08:19.771931
+Checked Out By:457565 At:2018-04-19 07:08:36.379809
+Checked In By:448363With a Rating of:02018-04-19 07:15:42.520807
+Checked Out By:448363 At:2018-04-19 07:15:44.172749 with a rating of: 5.0Checked Out By:448363 At:2018-04-19 07:16:14.104685
+Checked In By:448363With a Rating of:5.02018-04-19 07:16:31.096442
+Checked Out By:448363 At:2018-04-19 07:16:32.572667 with a rating of: 7.0Checked Out By:123456 At:2018-04-19 07:29:25.042881
+Checked In By:123456With a Rating of:02018-04-19 07:29:34.403961
+Checked Out By:123456 At:2018-04-19 07:29:35.748841 with a rating of: 6.0Checked Out By:123456 At:2018-04-19 07:44:14.204521
+Checked In By:123456With a Rating of:02018-04-19 07:44:23.020422
+Checked Out By:123456 At:2018-04-19 07:44:23.839936 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 07:45:59.979685
+Checked In By:448363With a Rating of:02018-04-19 07:46:07.227699
+Checked Out By:448363 At:2018-04-19 07:46:08.544861 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 07:48:31.786553
+Checked In By:448363With a Rating of:02018-04-19 07:48:45.210622
+Checked Out By:448363 At:2018-04-19 07:48:46.275828 with a rating of: 7.0Checked Out By:448363 At:2018-04-19 07:48:47.517779 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 07:49:08.858304
+Checked In By:448363With a Rating of:8.02018-04-19 07:49:16.505768
+Checked Out By:448363 At:2018-04-19 07:49:20.221833 with a rating of: 3.0Checked Out By:448363 At:2018-04-19 07:51:38.936770
+Checked In By:448363With a Rating of:02018-04-19 07:51:46.521320
+Checked Out By:448363 At:2018-04-19 07:51:47.452998 with a rating of: 4.0Checked Out By:448363 At:2018-04-19 07:52:24.761196
+Checked Out By:448363 At:2018-04-19 07:53:04.696671
+Checked In By:448363With a Rating of:02018-04-19 07:53:10.856559
+Checked Out By:448363 At:2018-04-19 07:53:11.643969 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 07:54:45.207918
+Checked In By:448363With a Rating of:02018-04-19 07:55:12.999652
+Checked Out By:448363 At:2018-04-19 07:55:13.771050 with a rating of: 7.0Checked Out By:448363 At:2018-04-19 07:55:33.751375
+Checked In By:448363With a Rating of:02018-04-19 07:59:36.021773
+Checked Out By:448363 At:2018-04-19 07:59:37.020608 with a rating of: 4.0Checked Out By:448363 At:2018-04-19 08:01:05.716616
+Checked In By:448363With a Rating of:02018-04-19 08:01:13.093028
+Checked Out By:448363 At:2018-04-19 08:01:14.138374 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:01:26.372499
+Checked In By:448363With a Rating of:02018-04-19 08:03:59.507768
+Checked Out By:448363 At:2018-04-19 08:04:00.455528 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:05:33.139165
+Checked In By:448363With a Rating of:02018-04-19 08:05:39.331233
+Checked Out By:448363 At:2018-04-19 08:05:40.166759 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:05:55.826420
+Checked Out By:448363 At:2018-04-19 08:07:02.641938
+Checked In By:448363With a Rating of:02018-04-19 08:07:09.618523
+Checked Out By:448363 At:2018-04-19 08:07:11.142292 with a rating of: 5.0Checked Out By:448363 At:2018-04-19 08:07:27.217727
+Checked In By:448363With a Rating of:02018-04-19 08:08:09.825582
+Checked Out By:448363 At:2018-04-19 08:08:11.383334 with a rating of: 3.0Checked Out By:448363 At:2018-04-19 08:08:45.761785
+Checked In By:448363With a Rating of:02018-04-19 08:08:54.881246
+Checked Out By:448363 At:2018-04-19 08:08:56.804719 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 08:09:08.417635
+Checked In By:448363With a Rating of:02018-04-19 08:12:51.872026
+Checked Out By:448363 At:2018-04-19 08:12:54.548270 with a rating of: 6.0Checked In By:448363With a Rating of:02018-04-19 08:16:04.654767
+Checked In By:448363With a Rating of:02018-04-19 08:20:26.412669
+Checked Out By:448363 At:2018-04-19 08:20:27.424311 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:20:41.996341
+Checked In By:448363With a Rating of:6.02018-04-19 08:21:00.524542
+Checked Out By:448363 At:2018-04-19 08:21:01.595477 with a rating of: 9.0Checked Out By:448363 At:2018-04-19 08:25:40.986494
+Checked In By:448363With a Rating of:02018-04-19 08:25:50.106476
+Checked Out By:448363 At:2018-04-19 08:25:51.790374 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 08:30:09.015888
+Checked In By:448363With a Rating of:02018-04-19 08:30:20.600453
+Checked Out By:448363 At:2018-04-19 08:30:21.564875 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 08:33:02.599122
+Checked In By:448363With a Rating of:02018-04-19 08:33:11.335093
+Checked Out By:448363 At:2018-04-19 08:33:45.254869
+Checked In By:448363With a Rating of:02018-04-19 08:33:57.078434
+Checked Out By:448363 At:2018-04-19 08:33:57.832194 with a rating of: 9.0Checked Out By:448363 At:2018-04-19 08:35:59.237419
+Checked In By:448363With a Rating of:02018-04-19 08:36:05.989791
+Checked Out By:448363 At:2018-04-19 08:36:08.281117 with a rating of: 9.0Checked Out By:448363 At:2018-04-19 08:37:14.613200
+Checked In By:448363With a Rating of:02018-04-19 08:37:21.125348
+Checked Out By:448363 At:2018-04-19 08:37:22.265114 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:38:03.716973
+Checked In By:448363With a Rating of:02018-04-19 08:38:13.013070
+Checked Out By:448363 At:2018-04-19 08:38:13.801015 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 08:41:40.067401
+Checked In By:448363With a Rating of:02018-04-19 08:41:46.803349
+Checked Out By:448363 At:2018-04-19 08:41:47.559230 with a rating of: 6.0Checked Out By:448363 At:2018-04-19 08:43:40.514525
+Checked In By:448363With a Rating of:02018-04-19 08:43:47.810350
+Checked Out By:448363 At:2018-04-19 08:43:48.613825 with a rating of: 8.0Checked Out By:448363 At:2018-04-19 08:48:36.079586
+Checked In By:448363With a Rating of:02018-04-19 08:48:41.920320
+Checked Out By:448363 At:2018-04-19 08:48:42.931852 with a rating of: 8.0Checked Out By:455597 At:2018-04-19 20:26:11.194461
+Checked In By:455597With a Rating of:02018-04-19 20:26:25.642305
+Checked Out By:455597 At:2018-04-19 20:26:26.172647 with a rating of: 6.0Checked Out By:455597 At:2018-04-19 20:31:47.879998
+Checked In By:455597With a Rating of:02018-04-19 20:32:05.767943
+Checked Out By:455597 At:2018-04-19 20:32:06.906948 with a rating of: 6.0Checked Out By:455597 At:2018-04-19 20:40:47.796474
+Checked Out By:448363 At:2018-04-20 00:49:50.758241
+Checked In By:448363With a Rating of:02018-04-20 00:51:24.741465
+Checked Out By:448363 At:2018-04-20 00:51:25.624416 with a rating of: 9.0Checked Out By:448363 At:2018-04-20 01:00:32.368936
+Checked In By:448363With a Rating of:02018-04-20 01:00:52.064730
+Checked Out By:448363 At:2018-04-20 01:00:52.979924 with a rating of: 7.0Checked Out By:448363 At:2018-04-20 01:04:07.551363
+Checked In By:448363With a Rating of:02018-04-20 01:04:19.439069
+Checked Out By:448363 At:2018-04-20 01:04:20.610197 with a rating of: 8.0Checked Out By:448363 At:2018-04-20 01:07:00.989918
+Checked In By:448363With a Rating of:02018-04-20 01:07:18.189773
+Checked Out By:448363 At:2018-04-20 01:07:19.120975 with a rating of: 5.0Checked Out By:448363 At:2018-04-20 01:11:34.445049
+Checked In By:448363With a Rating of:02018-04-20 01:11:57.229027
+Checked Out By:448363 At:2018-04-20 01:11:58.296389 with a rating of: 7.0Checked Out By:448363 At:2018-04-20 01:12:15.628819
+Checked Out By:123456 At:2018-04-20 01:12:30.652804
+Checked Out By:448363 At:2018-04-20 01:14:09.500407
+Checked Out By:123456 At:2018-04-20 01:14:25.356319
+Checked Out By:455597 At:2018-04-20 01:14:40.508226
+Checked In By:448363With a Rating of:02018-04-20 01:15:03.292191
+Checked Out By:448363 At:2018-04-20 01:15:03.887598 with a rating of: 5.0Checked Out By:448363 At:2018-04-20 01:24:11.097611
+Checked In By:448363With a Rating of:02018-04-20 01:24:38.425437
+Checked Out By:448363 At:2018-04-20 01:24:39.852450 with a rating of: 4.0Checked Out By:448363 At:2018-04-20 01:26:19.880266
+Checked In By:448363With a Rating of:02018-04-20 01:26:26.824319
+Checked Out By:448363 At:2018-04-20 01:26:27.771344 with a rating of: 7.0Checked Out By:448363 At:2018-04-20 01:27:18.471810
+Checked In By:448363With a Rating of:02018-04-20 01:27:26.887635
+Checked Out By:448363 At:2018-04-20 01:27:27.850809 with a rating of: 5.0Checked Out By:448363 At:2018-04-20 01:29:58.358320
+Checked In By:448363With a Rating of:02018-04-20 01:30:10.342309
+Checked Out By:448363 At:2018-04-20 01:30:11.161093 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:31:33.509386
+Checked In By:448363With a Rating of:02018-04-20 01:31:41.093581
+Checked Out By:448363 At:2018-04-20 01:31:41.912473 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:31:58.725327
+Checked In By:448363With a Rating of:10.02018-04-20 01:32:06.597114
+Checked Out By:448363 At:2018-04-20 01:32:07.832141 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:32:18.725127
+Checked In By:448363With a Rating of:10.02018-04-20 01:32:26.021090
+Checked Out By:448363 At:2018-04-20 01:32:26.728025 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:32:37.012943
+Checked In By:448363With a Rating of:10.02018-04-20 01:32:44.644993
+Checked Out By:448363 At:2018-04-20 01:32:45.383853 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:32:59.812857
+Checked In By:448363With a Rating of:10.02018-04-20 01:33:16.292771
+Checked Out By:448363 At:2018-04-20 01:33:17.031689 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:33:26.484662
+Checked In By:448363With a Rating of:10.02018-04-20 01:33:33.732615
+Checked Out By:448363 At:2018-04-20 01:33:34.439504 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:33:43.060776
+Checked In By:448363With a Rating of:10.02018-04-20 01:33:58.884532
+Checked Out By:448363 At:2018-04-20 01:33:59.671075 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:34:09.076342
+Checked In By:448363With a Rating of:10.02018-04-20 01:34:19.460384
+Checked Out By:448363 At:2018-04-20 01:34:20.039130 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:34:36.404201
+Checked In By:448363With a Rating of:10.02018-04-20 01:34:47.268142
+Checked Out By:448363 At:2018-04-20 01:34:48.022844 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:34:59.107990
+Checked In By:448363With a Rating of:10.02018-04-20 01:35:32.739713
+Checked Out By:448363 At:2018-04-20 01:35:33.799029 with a rating of: 10.0Checked Out By:448363 At:2018-04-20 01:41:06.352801
+Checked In By:448363With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:41:16.288703
+Checked Out By:448363 At:2018-04-20 01:41:17.509102 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 10.0]Checked Out By:448363 At:2018-04-20 01:44:11.663281
+Checked In By:448363With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:44:22.527186
+Checked Out By:448363 At:2018-04-20 01:44:23.555760 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0]Checked Out By:448363 At:2018-04-20 01:46:00.638390
+Checked In By:448363With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:46:11.294182
+Checked Out By:448363 At:2018-04-20 01:46:12.049461 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 3.0]Checked Out By:123456 At:2018-04-20 01:50:47.307488
+Checked In By:123456With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:50:56.747500
+Checked Out By:123456 At:2018-04-20 01:50:59.406940 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0]Checked Out By:448363 At:2018-04-20 01:53:44.490091
+Checked In By:448363With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:53:53.273979
+Checked Out By:448363 At:2018-04-20 01:53:54.075518 with a rating of: [0, 0, 0, 0, 0, 0, 3.0, 0, 0, 0]Checked Out By:448363 At:2018-04-20 01:55:21.513470
+Checked In By:448363With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 01:55:31.401174
+Checked Out By:448363 At:2018-04-20 01:55:32.170505 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0]Checked Out By:123456 At:2018-04-20 02:04:32.069054
+Checked In By:123456With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:04:47.732903
+Checked Out By:123456 At:2018-04-20 02:04:49.193174 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 6.0]Checked Out By:457565 At:2018-04-20 02:23:25.964290
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:23:45.292201
+Checked Out By:457565 At:2018-04-20 02:23:46.079308 with a rating of: [0, 0, 0, 0, 0, 0, 5.0, 0, 0, 0]Checked Out By:457565 At:2018-04-20 02:26:59.834721
+Checked Out By:457565 At:2018-04-20 02:27:14.106546
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:27:28.922660
+Checked Out By:457565 At:2018-04-20 02:27:33.279034 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 8.0]Checked Out By:457565 At:2018-04-20 02:27:50.778275
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:31:07.000904
+Checked Out By:457565 At:2018-04-20 02:31:08.284243 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 3.0]Checked Out By:457565 At:2018-04-20 02:32:21.832218
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:32:38.968146
+Checked Out By:457565 At:2018-04-20 02:32:40.603122 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 5.0]Checked Out By:457565 At:2018-04-20 02:35:01.798778
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:35:22.518562
+Checked Out By:457565 At:2018-04-20 02:35:23.977913 with a rating of: [0, 0, 0, 0, 0, 0, 0, 0, 0, 8.0]Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:40:25.108059
+Checked Out By:457565 At:2018-04-20 02:40:26.647342 with a rating of: [0, 0, 0, 0, 0, 0, 8.0, 0, 0, 0]Checked Out By:457565 At:2018-04-20 02:40:53.523772
+Checked Out By:457565 At:2018-04-20 02:41:15.539534
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 8.0, 0, 0, 0]2018-04-20 02:41:26.867449
+Checked Out By:457565 At:2018-04-20 02:41:27.653947 with a rating of: [0, 0, 0, 0, 0, 0, 8.0, 0, 0, 3.0]Checked Out By:457565 At:2018-04-20 02:47:42.608203
+Checked Out By:457565 At:2018-04-20 02:47:58.720110
+Checked Out By:457565 At:2018-04-20 02:50:07.039113
+Checked Out By:457565 At:2018-04-20 02:50:49.758884
+Checked In By:457565With a Rating of:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]2018-04-20 02:51:13.966638
+Checked Out By:457565 At:2018-04-20 02:51:14.703847 with a rating of: [0, 0, 0, 0, 2.0, 0, 0, 0, 0, 0]Checked Out By:457565 At:2018-04-20 02:51:31.726560
+Checked Out By:457565 At:2018-04-20 02:53:47.229695
+Checked In By:457565With a Rating of:[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]2018-04-20 02:53:59.789679
+Checked Out By:457565 At:2018-04-20 02:54:01.118915 with a rating of: [10, 8.0, 10, 10, 10, 10, 10, 10, 10, 10]Checked Out By:455597 At:2018-04-20 02:57:14.972442
+Checked Out By:123456 At:2018-04-20 02:57:44.108265
+Checked In By:455597With a Rating of:[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]2018-04-20 02:58:15.260080
+Checked Out By:455597 At:2018-04-20 02:58:18.510485 with a rating of: [10, 10, 10, 10, 4.0, 10, 10, 10, 10, 10]Checked Out By:123456 At:2018-04-20 02:58:33.547917
+Checked Out By:457565 At:2018-04-20 03:10:51.610432
+Checked Out By:457565 At:2018-04-20 18:31:57.366097
+Checked Out By:448363 At:2018-04-20 18:36:46.036068
+Checked Out By:448363 At:2018-04-20 18:46:47.098461
+Checked In By:123456With a Rating of:[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]2018-04-20 18:49:24.953432
+Checked Out By:123456 At:2018-04-20 18:49:33.533831 with a rating of: [10, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]Checked Out By:123456 At:2018-04-20 18:55:11.942564
+Checked Out By:123456 At:2018-04-20 18:57:52.580592
+Checked In By:123456With a Rating of:[10, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]2018-04-20 18:58:08.884518
+Checked Out By:123456 At:2018-04-20 18:58:17.497930 with a rating of: [2.0, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]Checked Out By:123456 At:2018-04-20 19:00:14.210965
+Checked In By:123456With a Rating of:[2.0, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]2018-04-20 19:06:33.853498
+Checked Out By:123456 At:2018-04-20 19:06:34.976440 with a rating of: [8.0, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]Checked Out By:448363 At:2018-04-20 19:14:11.478798
+Checked Out By:123456 At:2018-04-20 19:15:26.358904
+Checked Out By:123456 At:2018-04-20 19:16:43.526885
+Checked In By:123456With a Rating of:[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]2018-04-20 19:17:15.462878
+Checked Out By:123456 At:2018-04-20 19:17:16.508133 with a rating of: [10, 10, 10, 10, 10, 10, 7.0, 10, 10, 10]Checked Out By:123456 At:2018-04-20 19:26:41.188518
+Checked In By:123456With a Rating of:[10, 10, 10, 10, 10, 10, 7.0, 10, 10, 10]2018-04-20 19:27:14.516161
+Checked Out By:123456 At:2018-04-20 19:27:18.310405 with a rating of: [10, 10, 10, 10, 10, 10, 9.0, 10, 10, 10]Checked In By:448363With a Rating of:[10, 10, 10, 10, 10, 10, 9.0, 10, 10, 10]2018-04-20 19:28:01.891988
+Checked Out By:448363 At:2018-04-20 19:28:05.750548 with a rating of: [10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 10]Checked In By:123456With a Rating of:[10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 10]2018-04-20 19:30:45.219007
+Checked Out By:123456 At:2018-04-20 19:31:07.061157 with a rating of: [10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 9.0]Checked Out By:123456 At:2018-04-20 19:31:11.687168 with a rating of: [10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 2.0]Checked Out By:123456 At:2018-04-20 19:31:18.901411 with a rating of: [10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 9.0]Checked Out By:448363 At:2018-04-20 19:38:09.359119
+Checked Out By:123456 At:2018-04-20 19:39:18.606614
+Checked Out By:123456 At:2018-04-20 19:47:05.690399
+Checked In By:123456With a Rating of:[10, 8.0, 10, 10, 10, 10, 9.0, 10, 10, 9.0]2018-04-20 19:48:28.793781
+Checked Out By:123456 At:2018-04-20 19:48:30.603754 with a rating of: [10, 8.0, 10, 10, 10, 10, 5.0, 10, 10, 9.0]Checked In By:123456With a Rating of:[10, 8.0, 10, 10, 10, 10, 5.0, 10, 10, 9.0]2018-04-20 19:50:07.224933
+Checked Out By:123456 At:2018-04-20 19:50:09.740504 with a rating of: [10, 8.0, 10, 10, 10, 6.0, 5.0, 10, 10, 9.0]Checked In By:123456With a Rating of:[10, 8.0, 10, 10, 10, 6.0, 5.0, 10, 10, 9.0]2018-04-20 20:00:28.146980
+Checked Out By:448363 At:2018-04-20 20:02:18.881962
+Checked Out By:246805 At:2018-04-20 20:07:04.415962
+Checked Out By:123456 At:2018-04-20 20:16:15.226894
+Checked Out By:457565 At:2018-04-20 20:17:25.274181
+Checked In By:457565With a Rating of:[10, 10, 10, 10, 10, 10, 10, 10, 10, 10]2018-04-20 20:17:42.058105
+Checked Out By:457565 At:2018-04-20 20:17:46.766434 with a rating of: [10, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]Checked Out By:457565 At:2018-04-20 20:19:55.240939
+Checked Out By:457565 At:2018-04-20 20:27:56.037382
+Checked In By:457565With a Rating of:[10, 10, 10, 10, 10, 10, 10, 7.0, 10, 10]2018-04-20 20:28:22.677164
+Checked In By:448363With a Rating of:[10, 10, 10, 10, 10, 10, 10, 1.0, 10, 10]2018-04-20 20:29:36.068630
+Checked Out By:448363 At:2018-04-20 20:29:36.951631 with a rating of: [10, 10, 10, 10, 10, 10, 5.0, 1.0, 10, 10]Checked In By:448363With a Rating of:[10, 10, 10, 10, 10, 10, 5.0, 1.0, 10, 10]2018-04-20 20:29:58.724538
+Checked Out By:448363 At:2018-04-20 20:29:59.877647 with a rating of: [10, 10, 10, 10, 10, 10, 5.0, 1.0, 10, 8.0]Checked Out By:448363 At:2018-04-20 20:30:51.844440
+Checked In By:448363With a Rating of:[10, 10, 10, 10, 10, 10, 5.0, 1.0, 10, 8.0]2018-04-20 20:31:00.356229
+Checked Out By:448363 At:2018-04-20 20:31:01.208040 with a rating of: [10, 10, 10, 10, 10, 6.0, 5.0, 1.0, 10, 8.0]
